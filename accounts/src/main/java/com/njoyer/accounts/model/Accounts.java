@@ -26,4 +26,6 @@ public class Accounts {
     private String branchAddress;
     @Column(name = "create_dt")
     private LocalDate createDt;
+
 }
+
