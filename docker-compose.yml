@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  accounts:
+    image: njoyer/accounts:latest
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - njoyer-network
+
+  loans:
+    image: njoyer/loans:latest
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - njoyer-network
+
+  cards:
+    image: njoyer/cards:latest
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    ports:
+      - "9000:9000"
+    networks:
+      - njoyer-network
+
+networks:
+  njoyer-network:
